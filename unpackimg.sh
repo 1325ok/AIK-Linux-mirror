@@ -139,7 +139,7 @@ if [ "$(echo $imgtest | awk '{ print $2 }' | cut -d, -f1)" = "bootimg" ]; then
 else
   cd ..;
   cleanup;
-  echo "Unrecognized format.";
+  echo "Unrecognized format1.";
   abort;
   exit 1;
 fi;
@@ -330,7 +330,7 @@ fi;
 mv -f "$(ls *-*ramdisk)" "$file-${vendor}ramdisk.cpio$compext" 2>/dev/null;
 cd ..;
 if [ "$ramdiskcomp" = "data" ]; then
-  echo "Unrecognized format.";
+  echo "Unrecognized format2.";
   abort;
   exit 1;
 fi;
